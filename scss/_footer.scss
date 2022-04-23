@@ -1,0 +1,33 @@
+@import "./style";
+footer{
+    background-color: $grey8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $pinkishGrey;
+        padding: 16px;
+    }
+    .announce{
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        .policy{
+            font-size: 15px;
+            margin-right: 16px;
+            color: $whiteFour;
+        }
+        .statement{
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+    .copy-right{
+        font-weight: 300;
+        font-size: 13px;
+    }
+}

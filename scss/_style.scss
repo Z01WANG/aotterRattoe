@@ -1,0 +1,75 @@
+$lightNavy : #135384;
+$pastelRed : #DC5D5B;
+$sunflowerYellow : #FFCE00;
+$lightGreen : #20AFAB;
+$blueGrey : #6D899E;
+$denimBlue :#3B5998;
+$grey8 : #444444;
+$warmGrey : #898989;
+$warmGreyTwo : #9B9B9B;
+$pinkishGrey: #CACACA;
+$WhiteTwo : #E7E7E7;
+$whiteThree: #ECECEC;
+$whiteFour : #FBFBFB;
+
+
+// 卡片陰影
+@mixin shadow {
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+// 內文下方時間標籤資訊
+@mixin bottom-info-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+// 填滿按鈕
+@mixin solid-btn-style {
+    font-size: 15px;
+    display: flex;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 12px;
+    border-radius: 50px;
+}
+
+
+// RWD
+
+
+@mixin pad-lg{
+    @media(max-width: 1024px){
+      @content;
+    }
+}
+
+@mixin pad{
+    @media(max-width:768px){
+      @content;
+    }
+}
+
+@mixin mobile-md {
+  @media(max-width: 576px){
+      @content;
+    }
+}
+
+@mixin mobile-s {
+    @media(max-width: 420px){
+        @content;
+      }
+  }
+
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+}

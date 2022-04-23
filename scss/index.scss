@@ -1,0 +1,273 @@
+@import "./header";
+@import "./footer";
+@import "./style";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid green;
+    width: 100%;
+    height: fit-content;
+    padding: 32px 0;
+    // margin: 0 12px;
+    background-color: $WhiteTwo;
+    .one-section{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        &+.one-section{
+            margin-top: 5%;
+        }
+        &.top{
+            position: relative;
+            @include shadow;
+            .img-area{
+                width: 70%;
+                background-image: url(../image/post_cover/post_cover_03.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .info-area{
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                padding: 16px;
+                background-color: $whiteFour;
+                h2{
+                    margin: 0;
+                    padding: 0 0 8px 0;
+                    color: $grey8;
+                    border-bottom: 1px solid $pinkishGrey;
+                    font-weight: 500;
+                }
+                p{
+                    color: $warmGreyTwo;
+                    margin: 12px 0;
+                    height: 130px;
+                }
+                .time-mark{
+                    color: $pinkishGrey;
+                    font-size: 14px;
+                }
+                .tag-area{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 8px 0 4px 0;
+                    .tag{
+                        color: $warmGreyTwo;
+                        border: 1px solid ;
+                        font-size: 13px;
+                        padding: 4px 8px;
+                        margin: 0 4px 4px 0;
+                    }
+                }
+                .more-area{
+                    @include bottom-info-area;
+                    .detail-wrap{
+                        display: flex;
+                        .action-btn{
+                            display: flex;
+                            align-items: center;
+                            color: $warmGreyTwo;
+                            font-size: 15px;
+                            margin-right: 4px;
+                            img{
+                                width: 20px;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                    .navy-solid-btn{
+                        @include solid-btn-style;
+                        background-color: $lightNavy;
+                        color: $whiteFour;
+                    }
+                }
+            }
+            .slider-page{
+                // border: 1px solid red;
+                display: flex;
+                position: absolute;
+                left: 55%;
+                bottom: 4%;
+                .dot{
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    background: $whiteFour;
+                    border-radius: 50px;
+                    &+.dot{
+                        margin-left: 8px;
+                    }
+                    &.active{
+                        background: $warmGrey;
+                    }
+                }
+            }
+        }
+        &.middle{
+            justify-content: space-between;
+            .card{
+                @include shadow;
+                background: $whiteFour;
+                width: 30%;
+                padding: 0 0 12px 0;
+                .img-frame{
+                    height: 188px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info{
+                    padding: 4px 12px;
+                    .card-title{
+                        color: $grey8;
+                        font-size: 18px;
+                    }
+                    .content{
+                        color: $warmGrey;
+                        font-size: 14px;
+                    }
+                    .date{
+                        color: $pinkishGrey;
+                        font-size: 13px;
+                    }
+                    .more-area{
+                        @include bottom-info-area;
+                        .detail-wrap{
+                            display: flex;
+                            .action-btn{
+                                display: flex;
+                                align-items: center;
+                                color: $warmGreyTwo;
+                                font-size: 15px;
+                                margin-right: 4px;
+                                img{
+                                    width: 20px;
+                                    margin-right: 4px;
+                                }
+                            }
+                        }
+                        .solid-btn{
+                            @include solid-btn-style;
+                            background-color: $lightGreen;
+                            color: $whiteFour;
+                            &.red{
+                                background-color: $pastelRed;
+                                color: $whiteFour;
+                            }
+                            &.yellow{
+                                background-color: $sunflowerYellow;
+                                color: $denimBlue;
+                            }
+                        }
+                    }
+                }
+                &:first-child{
+                    .info{
+                        border-top: 8px solid $lightGreen;
+                    }
+                }
+                &:nth-child(2){
+                    .info{
+                        border-top: 8px solid $sunflowerYellow;
+                    }
+                }
+                &:nth-child(3){
+                    .info{
+                        border-top: 8px solid $pastelRed;
+                    }
+                }
+            }
+        }
+        &.third{
+            display: flex;
+            justify-content: space-between;
+            .md-card{
+                @include shadow;
+                display: flex;
+                flex-direction: column;
+                background-color: $whiteFour;
+                padding: 0 0 12px 0;
+                width: 47.5%;
+                .img-frame{
+                    width: 100%;
+                    height: 300px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info{
+                    padding: 4px 12px;
+                    .card-title{
+                        color: $grey8;
+                        font-size: 18px;
+                    }
+
+                    .content{
+                        color: $warmGrey;
+                        font-size: 14px;
+                    }
+                    .date{
+                        color: $pinkishGrey;
+                        font-size: 13px;
+                    }
+                    .more-area{
+                        @include bottom-info-area;
+                        .detail-wrap{
+                            display: flex;
+                            .action-btn{
+                                display: flex;
+                                align-items: center;
+                                color: $warmGreyTwo;
+                                font-size: 15px;
+                                margin-right: 4px;
+                                img{
+                                    width: 20px;
+                                    margin-right: 4px;
+                                }
+                            }
+                        }
+                        .solid-btn{
+                            @include solid-btn-style;
+                            background-color: $lightGreen;
+                            color: $whiteFour;
+                            &.red{
+                                background-color: $pastelRed;
+                                color: $whiteFour;
+                            }
+                            &.yellow{
+                                background-color: $sunflowerYellow;
+                                color: $denimBlue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .solid-btn-area{
+        width: 100%;
+        display: flex;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        margin-top: 5%;
+        .solid-btn{
+            @include solid-btn-style;
+            font-size: 18px;
+            color: $whiteFour;
+            background: $lightNavy;
+            padding: 4px 16px;
+            width: 100%;
+            max-width: 180px;
+        }
+    }
+}
