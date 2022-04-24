@@ -73,10 +73,76 @@ header{
                         padding: 0 12px;
                         border-radius: 50px;
                     }
+                    &.fb{
+                        display: none;
+                    }
                 }
             }
             @include pad {
                 display: none;
+            }
+            &.mobile{
+                // border: 1px solid red;
+                flex-direction: column;
+                position: fixed;
+                left: 0;
+                top: 0;
+                margin: 0;    
+                width: 100vw;
+                height: 100vh;
+                background-color: #114871de;
+                z-index: 9;
+                .nav-list{
+                    flex-direction: column;
+                    align-items: center;
+                    .nav-list-item{
+                        // border: 1px solid;
+                        color: $whiteFour;
+                        // justify-content: center;
+                        height: 45px;
+                        font-size: 17px;
+                        +.nav-list-item{
+                            margin: 0;
+                        }
+                        &.solid-btn{
+                            border: none;
+                            background: transparent;
+                        }
+                        &.active{
+                            color: $whiteFour;
+                            &::after{
+                                background-color: $whiteFour;
+                            }
+                        }
+                        &.fb{
+                            display: flex;
+                        }
+                    }
+                    .close-btn{
+                        // border: 1px solid $whiteFour;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        position: fixed;
+                        cursor: pointer;
+                        right: 12px;
+                        &::before, &::after{
+                            content: '';
+                            display: inline-block;
+                            height: 2px;
+                            width: 30px;
+                            background: $whiteFour;
+                            transform: rotateZ(45deg);
+                            position: absolute;
+                        }
+                        &::after{
+                            transform: rotateZ(-45deg);
+                        }
+                        
+                    }
+                }
             }
         }
     }

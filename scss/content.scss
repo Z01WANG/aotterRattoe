@@ -66,10 +66,40 @@
                         width: 100%;
                         max-width: 160px;
                     }
+
+                     @include pad {
+                        display: none;
+                     }
+                }
+            }
+            .mobile-text-area{
+                display: flex;
+                flex-direction: column;
+                // border: 1px solid red;
+                display: none;
+                label{
+                    color: $warmGrey;
+                    margin-right: 8px;
+                }
+                input{
+                    border: 1px solid $warmGrey;
+                    border-radius: 50px;
+                    width: calc(100% - 92px);
+                    line-height: 30px
+                }
+                .solid-btn{
+                    @include solid-btn-style;
+                    margin-top: 12px;
+                    &.navy{
+                        background: $lightNavy;
+                        color: $whiteFour;
+                    }
+                }
+                @include mobile-md {
+                    display: flex;
                 }
             }
             .tag-area{
-                // border: 1px solid red;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -88,14 +118,12 @@
                 }
             }
             .action-area{
-                // border: 1px solid ;
                 display: flex;
                 justify-content: space-between;
                 .interact-btn-area{
-                    // border: 1px solid red;
                     display: flex;
+                    // border: 1px solid red;
                     .fn-btn{
-                        // border: 1px solid ;
                         display: flex;
                         align-items: center;
                         color: $warmGrey;
@@ -108,9 +136,15 @@
                         width: 24px;
                         padding: 0 4px;
                     }
+                    @include pad {
+                        margin: 0;
+                        padding: 8px 0;
+                        img{
+                            width: 32px;
+                        }
+                    }
                 }
                 .provider{
-                    // border: 1px solid;
                     display: flex;
                     align-items: center;
                     padding: 16px 0;
@@ -120,7 +154,6 @@
                         margin-right: 8px;
                     }
                     .img-info{
-                        // border: 1px solid red;
                         width: 100%;
                         width: 250px;
                         height: 50px;
@@ -147,11 +180,19 @@
                                 font-size: 11px;
                             }
                         }
+                        @include pad {
+                            width: 100%;
+                        }
                     }
+                    @include pad {
+                        flex-direction: column;
+                    }
+                }
+                @include pad {
+                    flex-direction: column;
                 }
             }
             .review-area{
-                // border: 1px solid red;
                 .title-filter{
                     display: flex;
                     justify-content: space-between;
@@ -201,25 +242,23 @@
                 color: $denimBlue;
                 display: flex;
                 align-items: center;
-                padding: 8px 0;
-                margin: 12px 0;
+                // padding: 8px 0;
+                margin: 24px 0;
                 img{
                     height: 100%;
                     margin-right: 8px;
                 }
             }
         }
-        @include pad {
-            padding: 0;
+        @include pad-lg {
+            padding: 32px  16px 0 16px;
         }
     }
     .recommand-area{
-        // border: 1px solid red;
         width: 100%;
         background-color: $WhiteTwo;
         padding: 16px 16px 32px 16px;
         .area-title{
-            // border: 1px solid yellow;
             display: flex;
             justify-content: center;
             padding: 8px 0;
@@ -246,7 +285,40 @@
             }
         }
     }
-    @include pad-lg {
-        padding: 32px 16px;
+    .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-image: url(../image/assets/pic_l.png);
+        background-size: contain;
+        position: fixed;
+        top: 50vh;
+            &::before, &::after{
+                content: '';
+                height: 2px;
+                width: 25px;
+                background: #fff;
+                position: absolute;
+                transform: rotateZ(45deg);
+                transform-origin: 100% 0;
+            }
+            &::after{
+                // transform: rotateZ(90deg);
+                transform: rotateZ(-45deg);
+                transform-origin: 100% 0;
+                background: $whiteFour;
+            }
+        &.right{
+            right: 0;
+        }
+        &.left{
+            left: 0;
+            transform: scale(-1);
+        }
+        @include pad {
+            display: none;
+        }
     }
 }

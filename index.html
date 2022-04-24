@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <header id="pageHeader"></header>
@@ -56,15 +57,9 @@
                         <div class="navy-solid-btn">立即測驗</div>
                     </div>
             </div>
-            <!-- <div class="slider-page">
-                <span class="dot" index="0"></span>
-                <span class="dot" index="1"></span>
-                <span class="dot" index="2"></span>
-                <span class="dot" index="3"></span>
-            </div> -->
         </section>
         <section class="one-section middle">
-            <div class="card">
+            <a class="card" href="./content.html">
                 <div class="img-frame">
                     <img src="./image/post_cover/post_cover_05.png" alt="">
                 </div>
@@ -91,8 +86,8 @@
                         <div class="solid-btn">立即測驗</div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card" href="./content.html">
                 <div class="img-frame">
                     <img src="./image/post_cover/post_cover_02.png" alt="">
                 </div>
@@ -119,8 +114,8 @@
                         <div class="solid-btn yellow">立即測驗</div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card" href="./content.html">
                 <div class="img-frame">
                     <img src="./image/post_cover/post_cover_03.png" alt="">
                 </div>
@@ -147,7 +142,7 @@
                         <div class="red solid-btn">立即測驗</div>
                     </div>
                 </div>
-            </div>
+            </a>
         </section>
         <section class="one-section third">
             <div class="md-card">
@@ -213,25 +208,4 @@
     </main>
     <footer id="pageFooter"></footer>
   </body>
-  <script>
-    console.log("AA");
-    $(document).ready(function(){
-        $("#pageHeader").load("header.html");
-        $("#pageFooter").load("footer.html");
-
-        // $(".dot").click(function () {
-        //     console.log(this);
-        //     let idx = $(n).index();
-        //     console.log(idx);
-            
-        // });
-        $('.img-area').slick({
-            dots: true,
-            arrows: false,
-            autoplay: true,
-        });
-    });
-
-      
-  </script>
 </html>
