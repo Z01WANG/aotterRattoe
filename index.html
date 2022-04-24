@@ -6,42 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
   </head>
   <body>
-    <!-- <header>
-      <div class="header-wrap">
-        <div class="logo-nav-wrap">
-          <div class="logo-frame">
-            <img src="./image/assets/Rattoe_logo.svg" alt="" />
-          </div>
-          <nav class="nav">
-            <ul class="nav-list">
-              <li class="nav-list-item solid-btn">最新</li>
-              <li class="nav-list-item solid-btn">熱門</li>
-              <li class="nav-list-item active">感情</li>
-              <li class="nav-list-item">生活</li>
-              <li class="nav-list-item">綜藝</li>
-              <li class="nav-list-item">生活</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="function-menu">
-          <div class="fb-login-btn">
-            <img src="./image/assets/fb_icon.png" alt="" />
-          </div>
-          <div class="user-login-btn">
-            <img class="user-icon" src="./image/assets/user_icon.png" alt="" />
-            <span class="btn-text">登入</span>
-          </div>
-        </div>
-      </div>
-    </header>-->
     <header id="pageHeader"></header>
     <main class="main-container">
         <section class="one-section top">
             <div class="img-area">
-                <!-- <img src="./image/post_cover/post_cover_03.png" alt=""> -->
+                <img src="./image/post_cover/post_cover_03.png" alt=""> 
+                <img src="./image/post_cover/post_cover_02.png" alt=""> 
+                <img src="./image/post_cover/post_cover_01.png" alt=""> 
+                <img src="./image/post_cover/post_cover_04.png" alt=""> 
             </div>
             <div class="info-area">
                 <h2>你家的旅蛙是什麼性格<br>不超過兩行</h2>
@@ -78,13 +56,12 @@
                         <div class="navy-solid-btn">立即測驗</div>
                     </div>
             </div>
-            <div class="slider-page">
-                <span class="dot"></span>
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+            <!-- <div class="slider-page">
+                <span class="dot" index="0"></span>
+                <span class="dot" index="1"></span>
+                <span class="dot" index="2"></span>
+                <span class="dot" index="3"></span>
+            </div> -->
         </section>
         <section class="one-section middle">
             <div class="card">
@@ -241,7 +218,20 @@
     $(document).ready(function(){
         $("#pageHeader").load("header.html");
         $("#pageFooter").load("footer.html");
+
+        // $(".dot").click(function () {
+        //     console.log(this);
+        //     let idx = $(n).index();
+        //     console.log(idx);
+            
+        // });
+        $('.img-area').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+        });
     });
+
       
   </script>
 </html>

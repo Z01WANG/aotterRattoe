@@ -25,6 +25,10 @@ footer{
             font-weight: 300;
             font-size: 13px;
         }
+        @include mobile-s {
+            flex-direction: column;
+            margin: 0;
+        }
     }
     .copy-right{
         font-weight: 300;

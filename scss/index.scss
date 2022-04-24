@@ -9,11 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // border: 1px solid green;
     width: 100%;
     height: fit-content;
     padding: 32px 0;
-    // margin: 0 12px;
     background-color: $WhiteTwo;
     .one-section{
         width: 100%;
@@ -27,9 +25,47 @@
             @include shadow;
             .img-area{
                 width: 70%;
-                background-image: url(../image/post_cover/post_cover_03.png);
-                background-size: cover;
-                background-repeat: no-repeat;
+                margin: 0;
+                @include pad-lg {
+                    width: 100%;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                .slick-dots{
+                    width: fit-content;
+                    position: absolute;
+                    right: 5%;
+                    bottom: 5%;
+                    li {
+                        button{
+                            &::before{
+                                opacity: 1;
+                                color: $whiteFour;
+                            }
+                        }
+                        &.slick-active{
+                            button {
+                                &::before{
+                                    opacity: 1;
+                                    color: $warmGrey;
+                                }
+                            }
+                        }
+
+                    }
+                    @include pad {
+                        bottom: -145px;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+            .slick-dotted{
+                &.slick-slider{
+                    margin: 0;
+                }
             }
             .info-area{
                 display: flex;
@@ -43,15 +79,28 @@
                     color: $grey8;
                     border-bottom: 1px solid $pinkishGrey;
                     font-weight: 500;
+                    @include pad {
+                        border: none;
+                        padding: 0;
+                    }
                 }
                 p{
                     color: $warmGreyTwo;
                     margin: 12px 0;
                     height: 130px;
+                    @include pad-lg {
+                        height: fit-content;
+                    }
+                    @include pad {
+                        display: none
+                    }
                 }
                 .time-mark{
                     color: $pinkishGrey;
                     font-size: 14px;
+                    @include pad {
+                        display: none;
+                    }
                 }
                 .tag-area{
                     display: flex;
@@ -63,6 +112,9 @@
                         font-size: 13px;
                         padding: 4px 8px;
                         margin: 0 4px 4px 0;
+                    }
+                    @include pad {
+                        display: none
                     }
                 }
                 .more-area{
@@ -80,33 +132,30 @@
                                 margin-right: 4px;
                             }
                         }
+                        @include pad {
+                            display: none
+                        }
                     }
                     .navy-solid-btn{
                         @include solid-btn-style;
                         background-color: $lightNavy;
                         color: $whiteFour;
+                        @include pad {
+                            position: absolute;
+                            right: 8px;
+                            top: 50%;
+                        }
                     }
+                }
+                @include pad-lg {
+                    width: 100%;
+                    // padding: 0;
+                    padding: 8px;
                 }
             }
-            .slider-page{
-                // border: 1px solid red;
-                display: flex;
-                position: absolute;
-                left: 55%;
-                bottom: 4%;
-                .dot{
-                    display: inline-block;
-                    width: 8px;
-                    height: 8px;
-                    background: $whiteFour;
-                    border-radius: 50px;
-                    &+.dot{
-                        margin-left: 8px;
-                    }
-                    &.active{
-                        background: $warmGrey;
-                    }
-                }
+            @include pad-lg {
+                flex-direction: column;
+                margin-bottom: 48px;
             }
         }
         &.middle{
@@ -116,11 +165,17 @@
                 background: $whiteFour;
                 width: 30%;
                 padding: 0 0 12px 0;
+                @include pad {
+                    width: 100%;
+                    &+.card{
+                        margin-top: 24px;
+                    }
+                }
                 .img-frame{
-                    height: 188px;
+                    // height: 188px;
                     img{
                         width: 100%;
-                        height: 100%;
+                        // height: 100%;
                     }
                 }
                 .info{
@@ -183,6 +238,10 @@
                         border-top: 8px solid $pastelRed;
                     }
                 }
+            }
+            @include pad {
+                flex-direction: column;
+                padding: 8px 16px;
             }
         }
         &.third{
@@ -250,6 +309,12 @@
                     }
                 }
             }
+            @include pad {
+                flex-direction: column;
+            }
+            @include pad {
+                display: none;
+            }
         }
     }
     .solid-btn-area{
@@ -269,5 +334,14 @@
             width: 100%;
             max-width: 180px;
         }
+        @include pad {
+            margin: 5% 0;
+        }
+    }
+    @include pad-lg{
+        padding: 32px 16px;
+    }
+    @include mobile-md {
+        padding: 0;
     }
 }

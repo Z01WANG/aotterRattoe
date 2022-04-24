@@ -1,11 +1,11 @@
 * {
   font-family: 'Noto Sans TC', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 header {
@@ -217,12 +217,12 @@ header .function-menu .user-login-btn img {
 
 * {
   font-family: 'Noto Sans TC', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 footer {
@@ -277,6 +277,16 @@ footer .announce .statement {
   font-size: 13px;
 }
 
+@media (max-width: 420px) {
+  footer .announce {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+}
+
 footer .copy-right {
   font-weight: 300;
   font-size: 13px;
@@ -284,12 +294,12 @@ footer .copy-right {
 
 * {
   font-family: 'Noto Sans TC', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .inner-content {
@@ -377,14 +387,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 28px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2px 12px;
+  padding: 8px 16px;
   border-radius: 50px;
 }
 
@@ -416,6 +425,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 16px 8px;
   border-bottom: 2px solid #ECECEC;
 }
@@ -426,6 +437,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   padding: 4px 8px;
+  margin-bottom: 8px;
 }
 
 .inner-content .article-area .content-info .tag-area .tag + .tag {
@@ -595,6 +607,12 @@ body {
   margin-right: 8px;
 }
 
+@media (max-width: 768px) {
+  .inner-content .article-area {
+    padding: 0;
+  }
+}
+
 .inner-content .recommand-area {
   width: 100%;
   background-color: #E7E7E7;
@@ -633,5 +651,11 @@ body {
   left: 25%;
   bottom: 0;
   width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .inner-content {
+    padding: 32px 16px;
+  }
 }
 /*# sourceMappingURL=content.css.map */

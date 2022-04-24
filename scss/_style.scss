@@ -30,10 +30,10 @@ $whiteFour : #FBFBFB;
 @mixin solid-btn-style {
     font-size: 15px;
     display: flex;
-    height: 28px;
+    // height: 28px;
     align-items: center;
     justify-content: center;
-    padding: 2px 12px;
+    padding: 8px 16px;
     border-radius: 50px;
 }
 
@@ -68,8 +68,8 @@ $whiteFour : #FBFBFB;
 
 * {
     font-family: 'Noto Sans TC', sans-serif;
+    box-sizing: border-box;
 }
 body{
     margin: 0;
-    box-sizing: border-box;
 }

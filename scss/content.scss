@@ -72,6 +72,7 @@
                 // border: 1px solid red;
                 display: flex;
                 justify-content: center;
+                flex-wrap: wrap;
                 padding: 16px 8px;
                 border-bottom: 2px solid $whiteThree;
                 .tag{
@@ -80,6 +81,7 @@
                     font-size: 15px;
                     font-weight: 400;
                     padding: 4px 8px;
+                    margin-bottom: 8px;
                     &+.tag{
                         margin-left: 8px;
                     }
@@ -207,6 +209,9 @@
                 }
             }
         }
+        @include pad {
+            padding: 0;
+        }
     }
     .recommand-area{
         // border: 1px solid red;
@@ -240,5 +245,8 @@
                 }
             }
         }
+    }
+    @include pad-lg {
+        padding: 32px 16px;
     }
 }
