@@ -489,6 +489,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 30%;
   padding: 16px;
   background-color: #FBFBFB;
@@ -659,6 +662,7 @@ body {
   background: #FBFBFB;
   width: 30%;
   padding: 0 0 12px 0;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -941,7 +945,6 @@ body {
   font-size: 18px;
   color: #FBFBFB;
   background: #135384;
-  padding: 4px 16px;
   width: 100%;
   max-width: 180px;
 }
